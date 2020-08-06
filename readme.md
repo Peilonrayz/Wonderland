@@ -3,7 +3,7 @@
 This is my organization of Code Review's rules.
 It is an alpha release with many problems.
 
-A live version is available [here](https://peilonrayz.github.io/wonderland/).
+A live version is available [here](https://peilonrayz.github.io/Wonderland/).
 
 # License
 
