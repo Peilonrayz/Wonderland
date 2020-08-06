@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization &#8212; Wonderland 0.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code_review.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Categorized Posts" href="rules/index.html" />
+    <link rel="prev" title="Peilonrayz’ Guide to Wonderland" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="organization">
+<h1>Organization<a class="headerlink" href="#organization" title="Permalink to this headline">¶</a></h1>
+<p>There are two linked sections of the question organization.
+There is the <a class="reference external" href="rules/index.html">structure in RST / Website form</a>.
+And the tags applied to questions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an alpha product, both schemes are the <em>best so far</em>.
+They are subject to change.</p>
+<div class="line-block">
+<div class="line">I have plans on removing the Stack Exchange category and merging all rules in with the other categories.</div>
+<div class="line">Tags will also lose their prefixes at a later date.</div>
+</div>
+</div>
+<div class="section" id="structure">
+<h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h2>
+<p>The structure is mostly two or three levels big, depending on how many posts are contained in a group. (rule, sub-rule or sub-sub-rule)
+The structure can be expressed as a path in a tree:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">category</span><span class="p">}</span>    <span class="o">&gt;</span> <span class="p">{</span><span class="n">rule</span><span class="p">}</span>             <span class="o">&gt;</span> <span class="p">{</span><span class="n">sub</span> <span class="n">rule</span><span class="p">}</span>   <span class="o">&gt;</span> <span class="p">{</span><span class="n">sub</span> <span class="n">sub</span> <span class="n">rule</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Close</span> <span class="n">Reasons</span> <span class="o">&gt;</span> <span class="n">Broken</span>             <span class="o">&gt;</span> <span class="n">Bugs</span> <span class="p">(</span><span class="n">Known</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">Troubleshooting</span>
+<span class="n">Site</span> <span class="n">Policy</span>   <span class="o">&gt;</span> <span class="n">Comparative</span> <span class="n">Review</span>
+<span class="n">Privileges</span>    <span class="o">&gt;</span> <span class="n">Questions</span>          <span class="o">&gt;</span> <span class="n">Accept</span>
+</pre></div>
+</div>
+<dl>
+<dt>Category</dt><dd><p>These categorize the rules, not the questions.
+For example Broken is a Close Reason rule.
+But we have questions about Site Policy that fall under this this Close Reason rule.
+Take <a class="reference external" href="https://codereview.meta.stackexchange.com/q/8394/42401" title="Made a code-review of broken code, but flagged it as well">Made a code-review of broken code, but flagged it as well</a>.</p>
+</dd>
+<dt>Rule</dt><dd><p>These are rules.
+Quite a few will be familiar.
+I add new rules if there are enough questions in the other group that are similar enough.</p>
+<p>The names are mostly non-standard.</p>
+</dd>
+<dt>Sub Rule</dt><dd><p>When a rule has hundreds of questions it can help to categorize these in ways they are similar.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h2>
+<p>At first I’d planned for my tagging scheme to be compatible with Code Review’s, however I no longer have that as a goal.
+My scheme has 3 required tags meaning any rules that have sub sub rules (2 more tags) can’t be red-tagged (featured, etc) on Code Review.
+I think this is fine as only I probably care about my tags.
+Nor do I have a desire to fight against the status quo.</p>
+<p>There are three required tags:</p>
+<dl>
+<dt>Stack Exchange required tags</dt><dd><p><span class="tag">
+discussion</span>, <span class="tag">
+feature-request</span>, <span class="tag">
+bug</span>, <span class="tag">
+support</span>.</p>
+</dd>
+<dt>Question type</dt><dd><div class="line-block">
+<div class="line">These are prefixed with <span class="tag">
+t-</span> and are question specific categories.</div>
+<div class="line"><span class="tag">
+t-scope</span>, <span class="tag">
+t-policy</span>, <span class="tag">
+t-stack-exchange</span></div>
+</div>
+</dd>
+<dt>Rules</dt><dd><p>These are exactly the same as structure’s rules. These are prefixed with <span class="tag">
+c-</span>.</p>
+</dd>
+</dl>
+<p>Questions can be tagged with two rules. Tags after this are prefixed with <span class="tag">
+s-</span> except <span class="tag">
+x-moderation</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It should be quite apparent that the names are a mess.
+Additionally the prefixes are not here forever and are to help prevent name collisions.</p>
+</div>
+</div>
+<div class="section" id="linking-the-two-systems-together">
+<h2>Linking the two systems together<a class="headerlink" href="#linking-the-two-systems-together" title="Permalink to this headline">¶</a></h2>
+<p>I am in the process of migrating from having questions grouped and sorted manually in RST to the tag based system. Questions will have tags assigned in the tags.csv file in the top level of the repository. From here I wrote a simple Sphinx directive to grab all tags that match a query and output them into the document as required.</p>
+<p>For example the Authorship page is generated completely from the tags file.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Authorship</span>
+<span class="gh">==========</span>
+
+<span class="gh">Legal</span>
+<span class="gh">-----</span>
+
+:tag_group:<span class="nv">`c-authorship,s-legal`</span>
+
+<span class="gh">Maintainer</span>
+<span class="gh">----------</span>
+
+:tag_group:<span class="nv">`c-authorship,s-maintainer`</span>
+
+<span class="gh">Other</span>
+<span class="gh">-----</span>
+
+:tag_group:<span class="nv">`c-authorship,!s-legal,!s-maintainer`</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Wonderland</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Organization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linking-the-two-systems-together">Linking the two systems together</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rules/index.html">Categorized Posts</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Peilonrayz’ Guide to Wonderland</a></li>
+      <li>Next: <a href="rules/index.html" title="next chapter">Categorized Posts</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peilonrayz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/organization.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

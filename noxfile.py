@@ -2,6 +2,14 @@ import shutil
 
 import nox
 
+DOC_REQUIRES = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinx-autodoc-typehints",
+    "kecleon",
+    "beautifulsoup4",
+]
+
 
 def docs_command(builder):
     return [
@@ -17,15 +25,6 @@ def docs_command(builder):
 def docs(session):
     session.notify("docs_test")
     session.notify("docs_build")
-
-
-DOC_REQUIRES = [
-    "sphinx",
-    "sphinx_rtd_theme",
-    "sphinx-autodoc-typehints",
-    "kecleon",
-    "beautifulsoup4",
-]
 
 
 @nox.session(python="3.8")
