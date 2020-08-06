@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration &#8212; Wonderland 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code_review.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Moderation" href="moderation.html" />
+    <link rel="prev" title="Iterative Review" href="iterative_review.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="migration">
+<h1>Migration<a class="headerlink" href="#migration" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/87/42401" title="List of StackOverflow questions to migrate">List of StackOverflow questions to migrate</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/102/42401" title="Cross-posting etiquette">Cross-posting etiquette</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/275/42401" title="Which is the better fit — Code Review or Stack Overflow?">Which is the better fit — Code Review or Stack Overflow?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/279/42401" title="This question appears to have been migrated from programmers.SE twice">This question appears to have been migrated from programmers.SE twice</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/282/42401" title="On migrating from SO: how to do this efficiently and appropriately.">On migrating from SO: how to do this efficiently and appropriately.</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/341/42401" title="When we close a question, can we have an option to send it to Stack Overflow?">When we close a question, can we have an option to send it to Stack Overflow?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/415/42401" title="Move insufficiently answered question to stackoverflow?">Move insufficiently answered question to stackoverflow?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/581/42401" title="Why was a question suitable for Stack Overflow closed, instead of being migrated">Why was a question suitable for Stack Overflow closed, instead of being migrated</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/624/42401" title="Confused between posting on Code Review, Software Engineering, or Stack Overflow">Confused between posting on Code Review, Software Engineering, or Stack Overflow</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/718/42401" title="Move to SO or Programers">Move to SO or Programers</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/902/42401" title="Migrating questions to Stack Overflow">Migrating questions to Stack Overflow</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1205/42401" title="Is this appropriate for codereview.SE?">Is this appropriate for codereview.SE?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1277/42401" title="Migrating to Software Engineering">Migrating to Software Engineering</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1601/42401" title="Does this question belong on Code Review? Should it go to Code Golf?">Does this question belong on Code Review? Should it go to Code Golf?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1661/42401" title="Migrating to Software Engineering - v2">Migrating to Software Engineering - v2</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1687/42401" title="What questions are suitable for migration to Code Review, and how does the process work?">What questions are suitable for migration to Code Review, and how does the process work?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1964/42401" title="Unable to move a question to meta">Unable to move a question to meta</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2259/42401" title="Considering a migration from Stack Overflow to Code Review">Considering a migration from Stack Overflow to Code Review</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/3763/42401" title="What about this SO question renders it unsuitable for migration to CR?">What about this SO question renders it unsuitable for migration to CR?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/4929/42401" title="Should newbie questions be moved from SO to CR for style/organization advice?">Should newbie questions be moved from SO to CR for style/organization advice?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/4948/42401" title="The Code Review/Programmers/Stack Overflow hot potato">The Code Review/Programmers/Stack Overflow hot potato</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5190/42401" title="Should this question be un-migrated or migrated to another site?">Should this question be un-migrated or migrated to another site?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5798/42401" title="Stack Overflow moderator declined to migrate question asking to shorten code">Stack Overflow moderator declined to migrate question asking to shorten code</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5860/42401" title="Why did a question about unit-testing get migrated?">Why did a question about unit-testing get migrated?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6144/42401" title="Why wasn't the community consulted before adding Stack Overflow as a migration target?">Why wasn’t the community consulted before adding Stack Overflow as a migration target?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6141/42401" title="Migration paths to other sites">Migration paths to other sites</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6149/42401" title="Can Stack Overflow be removed as a migration target?">Can Stack Overflow be removed as a migration target?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6157/42401" title="Why was “Set ADT union Assistance” not migrated to Stack Overflow?">Why was “Set ADT union Assistance” not migrated to Stack Overflow?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6310/42401" title="Migrate to Programmers / Stack Overflow Revisited">Migrate to Programmers / Stack Overflow Revisited</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6719/42401" title="How can I flag a post for migration to SO?">How can I flag a post for migration to SO?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6791/42401" title="How should I best react when questions are migrated here?">How should I best react when questions are migrated here?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6971/42401" title="Allow users to vote to migrate a question from meta.codereview to main">Allow users to vote to migrate a question from meta.codereview to main</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8858/42401" title="How do I migrate from Code Review to Stack Overflow?">How do I migrate from Code Review to Stack Overflow?</a></p></li>
+</ul>
+<p><ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/87/42401" title="List of StackOverflow questions to migrate">List of StackOverflow questions to migrate</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/102/42401" title="Cross-posting etiquette">Cross-posting etiquette</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/275/42401" title="Which is the better fit — Code Review or Stack Overflow?">Which is the better fit — Code Review or Stack Overflow?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/279/42401" title="This question appears to have been migrated from programmers.SE twice">This question appears to have been migrated from programmers.SE twice</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/282/42401" title="On migrating from SO: how to do this efficiently and appropriately.">On migrating from SO: how to do this efficiently and appropriately.</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/341/42401" title="When we close a question, can we have an option to send it to Stack Overflow?">When we close a question, can we have an option to send it to Stack Overflow?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/415/42401" title="Move insufficiently answered question to stackoverflow?">Move insufficiently answered question to stackoverflow?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/581/42401" title="Why was a question suitable for Stack Overflow closed, instead of being migrated">Why was a question suitable for Stack Overflow closed, instead of being migrated</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/624/42401" title="Confused between posting on Code Review, Software Engineering, or Stack Overflow">Confused between posting on Code Review, Software Engineering, or Stack Overflow</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/718/42401" title="Move to SO or Programers">Move to SO or Programers</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/902/42401" title="Migrating questions to Stack Overflow">Migrating questions to Stack Overflow</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1205/42401" title="Is this appropriate for codereview.SE?">Is this appropriate for codereview.SE?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1277/42401" title="Migrating to Software Engineering">Migrating to Software Engineering</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1601/42401" title="Does this question belong on Code Review? Should it go to Code Golf?">Does this question belong on Code Review? Should it go to Code Golf?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1661/42401" title="Migrating to Software Engineering - v2">Migrating to Software Engineering - v2</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1687/42401" title="What questions are suitable for migration to Code Review, and how does the process work?">What questions are suitable for migration to Code Review, and how does the process work?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1964/42401" title="Unable to move a question to meta">Unable to move a question to meta</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2259/42401" title="Considering a migration from Stack Overflow to Code Review">Considering a migration from Stack Overflow to Code Review</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/3763/42401" title="What about this SO question renders it unsuitable for migration to CR?">What about this SO question renders it unsuitable for migration to CR?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/4929/42401" title="Should newbie questions be moved from SO to CR for style/organization advice?">Should newbie questions be moved from SO to CR for style/organization advice?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/4948/42401" title="The Code Review/Programmers/Stack Overflow hot potato">The Code Review/Programmers/Stack Overflow hot potato</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5190/42401" title="Should this question be un-migrated or migrated to another site?">Should this question be un-migrated or migrated to another site?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5798/42401" title="Stack Overflow moderator declined to migrate question asking to shorten code">Stack Overflow moderator declined to migrate question asking to shorten code</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5860/42401" title="Why did a question about unit-testing get migrated?">Why did a question about unit-testing get migrated?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6141/42401" title="Migration paths to other sites">Migration paths to other sites</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6144/42401" title="Why wasn't the community consulted before adding Stack Overflow as a migration target?">Why wasn’t the community consulted before adding Stack Overflow as a migration target?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6149/42401" title="Can Stack Overflow be removed as a migration target?">Can Stack Overflow be removed as a migration target?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6157/42401" title="Why was “Set ADT union Assistance” not migrated to Stack Overflow?">Why was “Set ADT union Assistance” not migrated to Stack Overflow?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6310/42401" title="Migrate to Programmers / Stack Overflow Revisited">Migrate to Programmers / Stack Overflow Revisited</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6719/42401" title="How can I flag a post for migration to SO?">How can I flag a post for migration to SO?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6791/42401" title="How should I best react when questions are migrated here?">How should I best react when questions are migrated here?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6971/42401" title="Allow users to vote to migrate a question from meta.codereview to main">Allow users to vote to migrate a question from meta.codereview to main</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8858/42401" title="How do I migrate from Code Review to Stack Overflow?">How do I migrate from Code Review to Stack Overflow?</a></div>
+<div class="line"><span class="tag">
+c-migration</span></div>
+</div>
+</li>
+</ul>
+</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Wonderland</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Categorized Posts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../close_reasons/index.html">Close Reasons</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Site Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../privileges/index.html">Privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack_exchange/index.html">Stack Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Categorized Posts</a><ul>
+  <li><a href="index.html">Site Policy</a><ul>
+      <li>Previous: <a href="iterative_review.html" title="previous chapter">Iterative Review</a></li>
+      <li>Next: <a href="moderation.html" title="next chapter">Moderation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peilonrayz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/rules/site_policy/migration.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

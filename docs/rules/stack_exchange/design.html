@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design &#8212; Wonderland 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code_review.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Elections" href="elections.html" />
+    <link rel="prev" title="Close Reasons" href="close_reasons.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="design">
+<h1>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/45/42401" title="Problem with meta favicon">Problem with meta favicon</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/70/42401" title="What should our logo and site design look like?">What should our logo and site design look like?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/251/42401" title="Change the “code” icon in markup editor toolbar?">Change the “code” icon in markup editor toolbar?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/497/42401" title="Inconsistent link hover behavior in Chrome">Inconsistent link hover behavior in Chrome</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/509/42401" title="Highlight color for favorite-tagged questions">Highlight color for favorite-tagged questions</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/945/42401" title="Closing &gt; Off-Topic dialog could use some more formatting">Closing &gt; Off-Topic dialog could use some more formatting</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6188/42401" title="Can we get a consistent green, please?">Can we get a consistent green, please?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6191/42401" title="Selection state of upvote/downvote buttons on Meta isn't obvious">Selection state of upvote/downvote buttons on Meta isn’t obvious</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6194/42401" title="Tags are too low-contrast to be readable">Tags are too low-contrast to be readable</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6196/42401" title="Icons misaligned with the new design">Icons misaligned with the new design</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6198/42401" title="Flag-handling dialog has odd line break">Flag-handling dialog has odd line break</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6204/42401" title="Relative positioning of badge icon relative to badge count">Relative positioning of badge icon relative to badge count</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6209/42401" title="Some old icons are still showing">Some old icons are still showing</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6211/42401" title="Site rooms button hover color hides the logo">Site rooms button hover color hides the logo</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6212/42401" title="Line height in comments is too small">Line height in comments is too small</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6215/42401" title="IP lookup heading almost overlapping first entry">IP lookup heading almost overlapping first entry</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6216/42401" title="Certain characters formatted with ### seem messed up under 100% zoom">Certain characters formatted with ### seem messed up under 100% zoom</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6220/42401" title="Flagging history appears at the bottom of page">Flagging history appears at the bottom of page</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6221/42401" title="The color (or contrast) of visited links is too light to be readable">The color (or contrast) of visited links is too light to be readable</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6222/42401" title="Can I keep my chat with darkness in it?">Can I keep my chat with darkness in it?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6224/42401" title="The C# tag clips just a tad">The C# tag clips just a tad</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6225/42401" title="Tag count partially obstructed for longer tags when adding to question">Tag count partially obstructed for longer tags when adding to question</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6230/42401" title="Buttons in the profile page have underlined links">Buttons in the profile page have underlined links</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6239/42401" title="Beta logo still present on Stack Exchange iOS app">Beta logo still present on Stack Exchange iOS app</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6348/42401" title="Visited badge link color on mobile [closed]">Visited badge link color on mobile [closed]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6349/42401" title="Certain characters formatted with ### seem messed up under 100% zoom">Certain characters formatted with ### seem messed up under 100% zoom</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6410/42401" title="Off-topic because… There are strange radio buttons">Off-topic because… There are strange radio buttons</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6508/42401" title="Dynamic editor width when answering">Dynamic editor width when answering</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6584/42401" title="The “Edit” screen seems to be broken">The “Edit” screen seems to be broken</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6628/42401" title="Bug in display of recently earned badge">Bug in display of recently earned badge</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6639/42401" title="Would it be possible to have the question closer to the answer field?">Would it be possible to have the question closer to the answer field?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6680/42401" title="The use of light gray type on this site makes it very difficult to read [closed]">The use of light gray type on this site makes it very difficult to read [closed]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6683/42401" title="New Answers to Old Questions layout is broken">New Answers to Old Questions layout is broken</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6704/42401" title="The checkmark for “positive question record” clips a bit">The checkmark for “positive question record” clips a bit</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6771/42401" title="Flag summary layout broken">Flag summary layout broken</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6782/42401" title="Line alignment bug with user names and comments">Line alignment bug with user names and comments</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6808/42401" title="Sign Up / Log In page header looks funny">Sign Up / Log In page header looks funny</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6845/42401" title="Possible misalignment within mod message page">Possible misalignment within mod message page</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7166/42401" title="Certain characters formatted with ### seem messed up under 100% zoom">Certain characters formatted with ### seem messed up under 100% zoom</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7307/42401" title="Setting for tracking a privilege / tag badge overlaps tracker">Setting for tracking a privilege / tag badge overlaps tracker</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7325/42401" title="Font style doesn't work with new font">Font style doesn’t work with new font</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8435/42401" title="Font style doesn't work with new font">Font style doesn’t work with new font</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8462/42401" title="Font style doesn't work with new font">Font style doesn’t work with new font</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8545/42401" title="Font style doesn't work with new font">Font style doesn’t work with new font</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8649/42401" title="Font style doesn't work with new font">Font style doesn’t work with new font</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8709/42401" title="Favorite categories - not all favorite tag questions are colored">Favorite categories - not all favorite tag questions are colored</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8753/42401" title="Nav bar? Where are you?">Nav bar? Where are you?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8882/42401" title="Mathjax formatting missing in rendered output of suggested edit">Mathjax formatting missing in rendered output of suggested edit</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8980/42401" title="Active bounties image is not loaded">Active bounties image is not loaded</a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Wonderland</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Categorized Posts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../close_reasons/index.html">Close Reasons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../site_policy/index.html">Site Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../privileges/index.html">Privileges</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Stack Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Categorized Posts</a><ul>
+  <li><a href="index.html">Stack Exchange</a><ul>
+      <li>Previous: <a href="close_reasons.html" title="previous chapter">Close Reasons</a></li>
+      <li>Next: <a href="elections.html" title="next chapter">Elections</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peilonrayz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/rules/stack_exchange/design.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

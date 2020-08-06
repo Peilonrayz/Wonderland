@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterative Review &#8212; Wonderland 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code_review.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Migration" href="migration.html" />
+    <link rel="prev" title="Insightful Observation" href="insightful_observation.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="iterative-review">
+<h1>Iterative Review<a class="headerlink" href="#iterative-review" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/185/42401" title="Editing your own answer">Editing your own answer</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/187/42401" title="Answering your own review">Answering your own review</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/590/42401" title="Is it okay to post a series of exercises massively?">Is it okay to post a series of exercises massively?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/651/42401" title="Is it valid to reask (many) question on same script?">Is it valid to reask (many) question on same script?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/845/42401" title="Handling Asker not learning from previous reviews">Handling Asker not learning from previous reviews</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1065/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2215/42401" title="Navigating between question-answers parts">Navigating between question-answers parts</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/3639/42401" title="Why was my conclusion edited out? [duplicate]">Why was my conclusion edited out? [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5072/42401" title="Process to follow when un-answered questions have a follow-on">Process to follow when un-answered questions have a follow-on</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5107/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5177/42401" title="Does there exist any conditions for closing iterative review questions as duplicates?">Does there exist any conditions for closing iterative review questions as duplicates?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5272/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5509/42401" title="Authors 'final result' post showing the 'final result' after the answer/corrections/suggestions [duplicate]">Authors ‘final result’ post showing the ‘final result’ after the answer/corrections/suggestions [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5524/42401" title="How can I ask for a review of the same item after making an update? [duplicate]">How can I ask for a review of the same item after making an update? [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5895/42401" title="Harmless duplicate or are we being taken advantage of?">Harmless duplicate or are we being taken advantage of?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5934/42401" title="Can I ask the same question with a different language?">Can I ask the same question with a different language?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6050/42401" title="Is code ever clean enough? - Can there be too many follow-up questions?">Is code ever clean enough? - Can there be too many follow-up questions?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6117/42401" title="How can I post updates/implementation of changes after a code review? [duplicate]">How can I post updates/implementation of changes after a code review? [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6813/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6852/42401" title="Do I edit my question based on answers? [duplicate]">Do I edit my question based on answers? [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6999/42401" title="Can I have a question “series” for a major project?">Can I have a question “series” for a major project?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7215/42401" title="Asking questions on evolved code">Asking questions on evolved code</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7252/42401" title="Multiple reviews or one big review?">Multiple reviews or one big review?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8372/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8412/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8495/42401" title="Multiple similar questions from the same user">Multiple similar questions from the same user</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8503/42401" title="How long should we wait before asking for an iterative review?">How long should we wait before asking for an iterative review?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8590/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8899/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8932/42401" title="Why is my second “Form maximum date/time from some digits” question being down voted?">Why is my second “Form maximum date/time from some digits” question being down voted?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9098/42401" title="Given CR's question title policy, how to title a second question about the same program?">Given CR’s question title policy, how to title a second question about the same program?</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9109/42401" title="How many questions with same script can I ask, if code not only merged reviews but adds new functionality [duplicate]">How many questions with same script can I ask, if code not only merged reviews but adds new functionality [duplicate]</a></p></li>
+<li><p><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9263/42401" title="Multiple related question titles">Multiple related question titles</a></p></li>
+</ul>
+<p><ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/185/42401" title="Editing your own answer">Editing your own answer</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/187/42401" title="Answering your own review">Answering your own review</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/590/42401" title="Is it okay to post a series of exercises massively?">Is it okay to post a series of exercises massively?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/651/42401" title="Is it valid to reask (many) question on same script?">Is it valid to reask (many) question on same script?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/845/42401" title="Handling Asker not learning from previous reviews">Handling Asker not learning from previous reviews</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1065/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1763/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-policy</span><span class="tag">
+c-edits</span><span class="tag">
+c-answer-invalidation</span><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2215/42401" title="Navigating between question-answers parts">Navigating between question-answers parts</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/3639/42401" title="Why was my conclusion edited out? [duplicate]">Why was my conclusion edited out? [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5072/42401" title="Process to follow when un-answered questions have a follow-on">Process to follow when un-answered questions have a follow-on</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5107/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5177/42401" title="Does there exist any conditions for closing iterative review questions as duplicates?">Does there exist any conditions for closing iterative review questions as duplicates?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5272/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5509/42401" title="Authors 'final result' post showing the 'final result' after the answer/corrections/suggestions [duplicate]">Authors ‘final result’ post showing the ‘final result’ after the answer/corrections/suggestions [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5524/42401" title="How can I ask for a review of the same item after making an update? [duplicate]">How can I ask for a review of the same item after making an update? [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5895/42401" title="Harmless duplicate or are we being taken advantage of?">Harmless duplicate or are we being taken advantage of?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5934/42401" title="Can I ask the same question with a different language?">Can I ask the same question with a different language?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6050/42401" title="Is code ever clean enough? - Can there be too many follow-up questions?">Is code ever clean enough? - Can there be too many follow-up questions?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6117/42401" title="How can I post updates/implementation of changes after a code review? [duplicate]">How can I post updates/implementation of changes after a code review? [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6813/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6852/42401" title="Do I edit my question based on answers? [duplicate]">Do I edit my question based on answers? [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6999/42401" title="Can I have a question “series” for a major project?">Can I have a question “series” for a major project?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7215/42401" title="Asking questions on evolved code">Asking questions on evolved code</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7252/42401" title="Multiple reviews or one big review?">Multiple reviews or one big review?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8372/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8412/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8495/42401" title="Multiple similar questions from the same user">Multiple similar questions from the same user</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8503/42401" title="How long should we wait before asking for an iterative review?">How long should we wait before asking for an iterative review?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8590/42401" title="For an iterative review, is it okay to edit my own question to include revised code?">For an iterative review, is it okay to edit my own question to include revised code?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8899/42401" title="How to post a follow-up question?">How to post a follow-up question?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8932/42401" title="Why is my second “Form maximum date/time from some digits” question being down voted?">Why is my second “Form maximum date/time from some digits” question being down voted?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9098/42401" title="Given CR's question title policy, how to title a second question about the same program?">Given CR’s question title policy, how to title a second question about the same program?</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9109/42401" title="How many questions with same script can I ask, if code not only merged reviews but adds new functionality [duplicate]">How many questions with same script can I ask, if code not only merged reviews but adds new functionality [duplicate]</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9263/42401" title="Multiple related question titles">Multiple related question titles</a></div>
+<div class="line"><span class="tag">
+c-iterative-review</span></div>
+</div>
+</li>
+</ul>
+</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Wonderland</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Categorized Posts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../close_reasons/index.html">Close Reasons</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Site Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../privileges/index.html">Privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack_exchange/index.html">Stack Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Categorized Posts</a><ul>
+  <li><a href="index.html">Site Policy</a><ul>
+      <li>Previous: <a href="insightful_observation.html" title="previous chapter">Insightful Observation</a></li>
+      <li>Next: <a href="migration.html" title="next chapter">Migration</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peilonrayz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/rules/site_policy/iterative_review.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

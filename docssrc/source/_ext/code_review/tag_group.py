@@ -35,7 +35,7 @@ def make_items(items):
 
 
 def read_csv():
-    with (pathlib.Path.cwd().parent / 'tags.csv').open(newline='') as f:
+    with (pathlib.Path.cwd() / 'tags.csv').open(newline='') as f:
         reader = csv.reader(f)
         next(reader)
         for id, *tags in reader:

@@ -5,10 +5,9 @@ Categorized Posts
    :maxdepth: 10
    :caption: Contents:
 
-   close_reasons
-   core_privileges
-   privileges
-   tags
-   site_policy
+   close_reasons/index
+   site_policy/index
+   privileges/index
+   stack_exchange/index
+
    other
-   stack_exchange

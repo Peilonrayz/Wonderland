@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design &#8212; Wonderland 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code_review.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Duplicates" href="duplicates.html" />
+    <link rel="prev" title="Description" href="description.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="design">
+<h1>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h1>
+<p><ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/74/42401" title="Should design questions be on-topic here?">Should design questions be on-topic here?</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/149/42401" title="Are database design reviews in scope?">Are database design reviews in scope?</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/213/42401" title="Where do high-level architecture and design questions go?">Where do high-level architecture and design questions go?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-policy</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/371/42401" title="Would Code Review be a good site to post architectural issues?">Would Code Review be a good site to post architectural issues?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/825/42401" title="Specific questions about design">Specific questions about design</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1486/42401" title="Are questions on design only requiring minimal code off topic?">Are questions on design only requiring minimal code off topic?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1536/42401" title="What to do when working, non-example code is too much code?">What to do when working, non-example code is too much code?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1536/42401" title="What to do when working, non-example code is too much code?">What to do when working, non-example code is too much code?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/1924/42401" title="Reviewing “design”">Reviewing “design”</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2008/42401" title="Can I ask a question about overall architecture without much specific code?">Can I ask a question about overall architecture without much specific code?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2308/42401" title="Questions about interfaces, protocols, and APIs">Questions about interfaces, protocols, and APIs</a></div>
+<div class="line"><span class="tag">
+discussion</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/5473/42401" title="Could I make my design/approach question on-topic?">Could I make my design/approach question on-topic?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6092/42401" title="Can I ask a question about overall architecture without much specific code?">Can I ask a question about overall architecture without much specific code?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6416/42401" title="Are answers that discuss design/architecture related aspects of an on-scope question valid? [duplicate]">Are answers that discuss design/architecture related aspects of an on-scope question valid? [duplicate]</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6533/42401" title="Where do I ask questions about software structure?">Where do I ask questions about software structure?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-policy</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6571/42401" title="Design review for a compiler question">Design review for a compiler question</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6685/42401" title="Reviewing “design”">Reviewing “design”</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/6904/42401" title="Are implemented API reviews without code on-topic?">Are implemented API reviews without code on-topic?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7331/42401" title="Should I post about my design and architectural concerns on Code Review or Software Engineering?">Should I post about my design and architectural concerns on Code Review or Software Engineering?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-policy</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/8910/42401" title="Technology review without code">Technology review without code</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9145/42401" title="Should I ask architectural questions on CodeReview?">Should I ask architectural questions on CodeReview?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/10467/42401" title="Reviewing “design”">Reviewing “design”</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span></div>
+</div>
+</li>
+</ul>
+</p>
+<div class="section" id="language">
+<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
+<p><ul>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/2516/42401" title="Are requests for review of language design on topic?">Are requests for review of language design on topic?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span><span class="tag">
+s-language</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/7066/42401" title="Is it possible for me to get a review of my language? [duplicate]">Is it possible for me to get a review of my language? [duplicate]</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span><span class="tag">
+s-language</span></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference external" href="https://codereview.meta.stackexchange.com/q/9232/42401" title="Reviewing language design, with working interpreter and test case?">Reviewing language design, with working interpreter and test case?</a></div>
+<div class="line"><span class="tag">
+support</span><span class="tag">
+t-scope</span><span class="tag">
+c-design</span><span class="tag">
+s-language</span></div>
+</div>
+</li>
+</ul>
+</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Wonderland</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Categorized Posts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Close Reasons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../site_policy/index.html">Site Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../privileges/index.html">Privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stack_exchange/index.html">Stack Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../other.html">Other</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Categorized Posts</a><ul>
+  <li><a href="index.html">Close Reasons</a><ul>
+      <li>Previous: <a href="description.html" title="previous chapter">Description</a></li>
+      <li>Next: <a href="duplicates.html" title="next chapter">Duplicates</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peilonrayz.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/rules/close_reasons/design.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
