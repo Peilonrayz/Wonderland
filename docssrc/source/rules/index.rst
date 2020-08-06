@@ -1,11 +1,14 @@
-Rules
-=====
+Categorized Posts
+=================
 
 .. toctree::
    :maxdepth: 10
    :caption: Contents:
 
-   named
-   positional
+   close_reasons
+   core_privileges
+   privileges
+   tags
+   site_policy
    other
-   site
+   stack_exchange
