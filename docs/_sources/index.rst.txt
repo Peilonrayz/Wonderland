@@ -5,7 +5,7 @@ Peilonrayz' Guide to Wonderland
    :maxdepth: 2
    :caption: Contents:
 
-   rules
+   rules/index
 
 Indices and tables
 ==================

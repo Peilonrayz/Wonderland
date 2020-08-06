@@ -1,0 +1,11 @@
+.tag {
+    border: 1px #aaa solid;
+    border-radius: 0.25em;
+    padding: 0em 0.25em;
+    background-color: #ccc;
+    font-size: 0.8em;
+}
+
+.line-block {
+    margin: 0;
+}
