@@ -1,0 +1,196 @@
+# Todo
+
+Done:
+    444 Close Reasons
+        16  Authorship
+            9   Authorship
+            4   Legal
+            3   Maintainer
+
+        3   Best Practices
+        93  Broken
+            16  Bugs (known)
+            7   Troubleshooting
+            2   Ignore
+            13  Bugs (Unknown)
+            4   Correctness
+            4   Feature Request
+            3   Translating
+            2   Non-standard
+            4   Security
+            17  Scale
+            11  Moderation
+            5   Edits
+            4   Other
+            1   ???
+
+        73  Context
+            3   Pseudo-code
+            9   Example Code
+            4   Hypothetical Code
+            1   Sample Code
+            14  Complete
+            21  Support
+            21  Other
+
+        12  Description
+        24  Design
+            21  Design
+            3   Language
+        
+        12  Duplicates
+        11  Ignorant
+        29  Inline
+        48  Language Scope
+        47  Purpose
+            45  Purpose
+            2   ???
+        
+        34  Size
+            28  Size
+            5   Golf
+            1   ???
+        
+        29  Specific
+            28  Specific
+            1   ???
+        
+        2   Unimplemented
+        23  Other
+            22  Other
+            1   ???
+    184 Core Privileges
+        77  Questions
+            3   Accept
+            1   Answer
+            12  Body
+            11  Code
+            2   Clippy
+            1   Community Wiki
+            16  Title
+            17  Improve
+            1   Merge
+            3   How to Ask
+            1   Related Questions
+            1   Tags
+            8   Other
+
+        6   Questions (Off-topic)
+            5   Answers
+            1   Bounty
+
+        7   Posts
+            2   Body
+            2   Code
+            1   Community Wiki
+            2   Formatting
+        
+        94  Answers
+            4   Automation
+            5   Amount
+            12  Body
+            7   Size
+            5   Code
+            27  Content
+            1   Comments
+            4   Moderation
+            3   Guide
+            2   Flags
+            1   Votes
+            3   Improve
+            7   Other
+            13  ???
+
+Full:
+    207 Privileges (Not core)
+
+        10  Bounties
+        24  Chat
+        19  Comments
+        12  Delete
+        84  Edits
+            35  Edits
+            23  AI
+            3   Answer
+            13  Question
+            1   Question (Off-topic)
+            9   Site
+
+        12  Flags
+        1   Protect
+        18  Review Queues
+        8   Vote to Close
+        16  Votes
+        3   Other
+
+    239 Tags
+        64  Burnate
+        3   Blacklist
+        60  Create
+        41  Synonym
+        3   Merge
+        9   Rename
+        7   Wiki
+        27  Usage
+        7   Cleanup
+        11  Other
+        7   ???
+
+    124 Site Policy
+        9   Comparative Review
+        5   Insightful Observation
+        33  Iterative Review
+        33  Migration
+        2   Moderation
+        1   Answers
+        1   Moderators
+        5   Questions (Off-topic)
+        5   Multi-language
+        30  ???
+    
+    158 Other
+        27  Guide
+        9   Fun
+        9   Zombies
+        15  Review
+        2   Spam
+        3   Accept
+        1   Vampirism
+        3   Meta
+        1   Cool
+        2   Self Answer
+        11  Growth
+        8   Intersite
+        10  Helpful
+        3   Style
+        15  ???
+        39  Support
+    
+    396 Stack Exchange
+        6   Account
+        9   Badges
+        7   Beta
+        4   Blog
+        30  Close Reasons
+        26  Elections
+        43  Help Center
+        2   Hot Network Questions
+        16  Licensing
+        25  Markdown
+        3   Meta
+        1   Notifications
+        6   Reputation
+        3   Winterbash
+        1   Moderator Tools
+        1   Twitter
+        1   Answer
+        7   Search
+        49  Design
+        10  Post
+        5   Code Block
+        12  Syntax Highlighting
+        69  Other
+        60  ???
+
+Total:
+    1671
