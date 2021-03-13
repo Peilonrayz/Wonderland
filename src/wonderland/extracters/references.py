@@ -4,6 +4,8 @@ import textwrap
 
 import yaml
 
+from .question_titles import get_post_title
+
 
 class Link(enum.Enum):
     NAMED = 0
@@ -43,7 +45,7 @@ class ReferencesBuilder:
         return answer  # TODO: properly implement
 
     def _get_question_name(self, question):
-        return question  # TODO: properly implement
+        return get_post_title(question)
 
     def _get_question_link(self, question):
         return f"https://codereview.meta.stackexchange.com/q/{question}/42401"
@@ -223,7 +225,3 @@ class References:
             }
             for key, group in groups.items()
         }
-
-
-def load(path, *, builder=None):
-    return References.load(path, builder=builder)

@@ -4,7 +4,7 @@ from docutils import nodes
 
 from sphinx.application import Sphinx
 
-from .. import cache
+from .. import extracters
 from .nodes_ import Post, Tag, MTag
 from .tag_group import tag_group
 
@@ -28,7 +28,7 @@ def visit_mtag_html(self, node):
 
 
 def post(name, rawtext, text, lineno, inliner, options={}, content=[]):
-    name = cache.get(text, cache.title)
+    name = extracters.get_post_title(text)
     link = f'https://codereview.meta.stackexchange.com/q/{text}/42401'
     return (
         [Post(link, name, name)],

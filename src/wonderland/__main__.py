@@ -1,8 +1,8 @@
-from .extracters import references
+from .extracters import References
 
 
 def main():
-    for reference in references.load("references.yaml").messages():
+    for reference in References.load("references.yaml").messages():
         print(reference)
 
 

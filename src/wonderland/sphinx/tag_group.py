@@ -3,12 +3,12 @@ import pathlib
 
 from docutils import nodes
 
-from .. import cache
+from .. import extracters
 from .nodes_ import Post, MTag
 
 
 def make_item(id, tags):
-    name = cache.get(str(id), cache.title)
+    name = extracters.get_post_title(id)
     link = f'https://codereview.meta.stackexchange.com/q/{id}/42401'
     post = Post(link, name, name)
     if not tags:
