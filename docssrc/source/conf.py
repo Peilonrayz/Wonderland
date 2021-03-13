@@ -37,7 +37,7 @@ extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.githubpages",
     "sphinx.ext.intersphinx",
-    "_ext.code_review",
+    "wonderland.sphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.

@@ -3,7 +3,7 @@ import pathlib
 
 from docutils import nodes
 
-from . import cache
+from .. import cache
 from .nodes_ import Post, MTag
 
 

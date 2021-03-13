@@ -1,12 +1,10 @@
 import pathlib
-import os.path
-import time
 
 from docutils import nodes
 
 from sphinx.application import Sphinx
 
-from . import cache
+from .. import cache
 from .nodes_ import Post, Tag, MTag
 from .tag_group import tag_group
 
