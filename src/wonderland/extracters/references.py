@@ -4,7 +4,9 @@ import textwrap
 
 import yaml
 
-from .post_title import get_post_title
+from wonderland.cache import question_id
+
+from .file_cache import get_post_license, get_post_title, get_user_name, get_question_id, get_author_id
 
 
 class Link(enum.Enum):
@@ -42,7 +44,7 @@ class ReferencesBuilder:
             return references
 
     def _get_question_id(self, answer):
-        return answer  # TODO: properly implement
+        return get_question_id(answer)
 
     def _get_question_name(self, question):
         return get_post_title(question)
@@ -54,10 +56,16 @@ class ReferencesBuilder:
         return f"https://codereview.meta.stackexchange.com/a/{answer}/42401"
 
     def _get_user_name(self, user):
-        return user  # TODO: properly implement
+        return get_user_name(user)
 
     def _get_user_link(self, user):
         return f"https://codereview.meta.stackexchange.com/users/{user}"
+
+    def _get_user_id(self, question_id, post_id):
+        return get_author_id(question_id, post_id)
+
+    def _get_post_license(self, q_id, id):
+        return get_post_license(q_id, id)
 
     def _get_license(self, license):
         license = license.translate(LICENSE_TABLE)
@@ -86,7 +94,7 @@ class ReferencesBuilder:
             and None is question
             and None is not answer
         ):
-            question = self._get_question_id(answer)
+            src["question"] = question = self._get_question_id(answer)
         type = Link.NAMED
         if None is name:
             type = (
@@ -113,7 +121,17 @@ class ReferencesBuilder:
             }
 
     def _set_user(self, src, dest):
-        if None is (user := src.get("user")):
+        user = src.get("user")
+        question = src.get("question")
+        answer = src.get("answer")
+        if (None is user
+            and (
+                None is not question
+                or None is not answer
+            )
+        ):
+            user = self._get_user_id(question, answer or question)
+        if None is user:
             dest["user"] = None
         else:
             dest["user"] = {
@@ -122,7 +140,14 @@ class ReferencesBuilder:
             }
 
     def _set_license(self, src, dest):
-        if None is (license := src.get("license")):
+        license = src.get("license")
+        question = src.get("question")
+        post = src.get("answer") or question
+        if (None is license
+            and None is not post
+        ):
+            license = self._get_post_license(question, post)
+        if None is license:
             dest["license"] = None
         else:
             name, link = self._get_license(license)

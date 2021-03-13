@@ -1,4 +1,4 @@
-from .post_title import get_post_title
+from .file_cache import get_post_title
 from .references import References, ReferencesBuilder
 
 __all__ = [

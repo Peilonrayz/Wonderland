@@ -58,3 +58,22 @@ class PostFileCache(FileCache):
         except ValueError:
             raise ValueError(f'Unable to get item {id}')
         return json.loads(data)
+
+
+class UserFileCache(FileCache):
+    SLEEP = 10
+
+    def _missing(self, id: int):
+        try:
+            line = (
+                store
+                    .line(
+                        warehouse=(f'.cache/{self.fn.__name__}/{id}.json', self.fn),
+                        deliveries=f'.cache/users/{id}.html',
+                        provider=f'https://codereview.meta.stackexchange.com/users/{id}',
+                    )
+            )
+            data = line.get().get_all()
+        except ValueError:
+            raise ValueError(f'Unable to get item {id}')
+        return json.loads(data)
