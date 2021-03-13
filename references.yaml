@@ -1,0 +1,26 @@
+- page: close_reasons/authorship.rst
+  item: 1
+  link: https://codereview.stackexchange.com/help/on-topic
+  name: What topics can I ask about here?
+  quote: Am I an author or maintainer of the code?
+
+- page: close_reasons/authorship.rst
+  item: 2
+  link: https://codereview.stackexchange.com/legal/terms-of-service#licensing
+  name: Code Review's Terms of Service
+  section: Subscriber Content
+
+- page: close_reasons/authorship.rst
+  item: 2
+  link: https://codereview.stackexchange.com/help/licensing
+  name: User contributions license
+
+
+{link}[ under "{section}"][ by `{user_name} <>`_][©`{license} <>`_]
+
+    {quote}
+
+
+`Question {question} <>`_
+`Answer to {question} <>`_
+`{link} <>`_
