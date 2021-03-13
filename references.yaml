@@ -15,12 +15,8 @@
   link: https://codereview.stackexchange.com/help/licensing
   name: User contributions license
 
-
-{link}[ under "{section}"][ by `{user_name} <>`_][©`{license} <>`_]
-
-    {quote}
-
-
-`Question {question} <>`_
-`Answer to {question} <>`_
-`{link} <>`_
+- page: close_reasons/authorship.rst
+  item: 2
+  answer: 1295
+  user: 31503
+  license: CC BY-SA 4.0
