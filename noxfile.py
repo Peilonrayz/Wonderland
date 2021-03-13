@@ -3,11 +3,9 @@ import shutil
 import nox
 
 DOC_REQUIRES = [
-    "sphinx",
+    "sphinx==3.1.2",
     "sphinx_rtd_theme",
     "sphinx-autodoc-typehints",
-    "kecleon",
-    "beautifulsoup4",
 ]
 
 
@@ -24,12 +22,13 @@ def docs_command(builder):
 @nox.session
 def docs(session):
     session.notify("docs_test")
-    session.notify("docs_build")
+    session.notify("docs_clean_build")
 
 
-@nox.session(python="3.8")
+@nox.session(python="3.9")
 def docs_test(session):
     session.install(*DOC_REQUIRES)
+    session.install("-e", ".")
     shutil.rmtree("docssrc/build/", ignore_errors=True)
     session.run(*docs_command("doctest"))
     # session.run(*docs_command("linkcheck"))
@@ -37,8 +36,14 @@ def docs_test(session):
     shutil.rmtree("docssrc/build/", ignore_errors=True)
 
 
-@nox.session(python="3.8")
+@nox.session
+def docs_clean_build(session):
+    shutil.rmtree("docs/", ignore_errors=True)
+    session.notify("docs_build")
+
+
+@nox.session(python="3.9")
 def docs_build(session):
     session.install(*DOC_REQUIRES)
-    shutil.rmtree("docs/", ignore_errors=True)
+    session.install("-e", ".")
     session.run("sphinx-build", "-b", "html", "docssrc/source", "docs", "-a")
