@@ -4,7 +4,7 @@ import textwrap
 
 import yaml
 
-from .question_titles import get_post_title
+from .post_title import get_post_title
 
 
 class Link(enum.Enum):

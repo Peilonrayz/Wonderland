@@ -41,7 +41,7 @@ class FileCache(dict):
         raise ValueError(f'Unable to get item {id}')
 
 
-class BSFileCache(FileCache):
+class PostFileCache(FileCache):
     SLEEP = 10
 
     def _missing(self, id: int):
