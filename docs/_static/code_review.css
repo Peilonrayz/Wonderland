@@ -9,3 +9,32 @@
 .line-block {
     margin: 0;
 }
+
+.sphinx-tabs-tab {
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 0;
+    border: 0 solid #555;
+}
+
+.sphinx-tabs-tab[aria-selected="true"] {
+    padding: 0.1rem calc(0.6rem - 1px) 0.3rem calc(0.6rem - 1px);
+    border: 0 solid #555;
+    border-top-width: 0.2rem;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+[role="tablist"] {
+    border: 0 solid #555;
+    border-bottom-width: 1px;
+}
+
+.sphinx-tabs-panel {
+    border: 0;
+    padding: 0.5em 0;
+}
+
+.sphinx-tabs-panel:empty {
+    border: 0;
+    padding: 0;
+}
