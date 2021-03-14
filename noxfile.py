@@ -3,9 +3,10 @@ import shutil
 import nox
 
 DOC_REQUIRES = [
-    "sphinx==3.1.2",
+    "sphinx",
     "sphinx_rtd_theme",
     "sphinx-autodoc-typehints",
+    "sphinx-tabs",
 ]
 
 

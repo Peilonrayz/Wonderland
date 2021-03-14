@@ -16,5 +16,10 @@
   name: User contributions license
 
 - page: rules/close_reasons/authorship.rst
-  item: 2
+  item: 3
   answer: 1295
+  license: CC BY-SA 4.0
+  quote: "\
+In real life, a code review happens as a routine part of the development cycle. It happens after the code is designed, developed, and tested and in the process of being committed to the code base in preparation for release. The person doing the review sits with the person who wrote the code, and they go through it together. If the reviewer has questions like \"why are you doing it this way?\" then the developer is right there to give the appropriate answer.
+
+In Code Review, as an online resource, in a Q&A format, the expectation is that the text describing the code should explain why the code does things the way it does."

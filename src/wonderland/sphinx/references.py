@@ -13,8 +13,11 @@ REFERENCES = References.load("references.yaml").group()
 def reference_group(name, rawtext, text, lineno, inliner, options={}, content=[]):
     path = inliner.document.current_source
     path = str(pathlib.Path(path).relative_to(DOCS_SRC))
+    _refs = REFERENCES.get(path, {}).get(text, [])
+    if not _refs:
+        return ([], [])
     container = nodes.enumerated_list()
-    for ref in REFERENCES[path][text]:
+    for ref in _refs:
         output = [
             *ref.get("link", Null()).as_nodes(),
             *ref.get("section", Null()).as_nodes(),
