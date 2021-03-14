@@ -7,6 +7,7 @@ from sphinx.application import Sphinx
 from .. import extracters
 from .nodes_ import Post, Tag, MTag
 from .tag_group import tag_group
+from .references import reference_group
 
 
 def visit_post_html(self, node):
@@ -65,3 +66,4 @@ def setup(app: Sphinx):
     app.add_role('tag', tag)
     app.add_role('mtag', mtag)
     app.add_role('tag_group', tag_group)
+    app.add_role('reference_group', reference_group)

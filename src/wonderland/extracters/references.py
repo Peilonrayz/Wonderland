@@ -1,18 +1,19 @@
 import enum
 import string
 import textwrap
+import dataclasses
 
 import yaml
 
-from wonderland.cache import question_id
+from docutils import nodes
 
 from .file_cache import get_post_license, get_post_title, get_user_name, get_question_id, get_author_id
 
 
-class Link(enum.Enum):
-    NAMED = 0
-    QUESTION = 1
-    ANSWER = 2
+class LinkTypes(enum.Enum):
+    NAMED = ""
+    QUESTION = "Question "
+    ANSWER = "Answer to "
 
 
 LICENSE_TABLE = str.maketrans(
@@ -22,9 +23,9 @@ LICENSE_TABLE = str.maketrans(
 )
 
 LINK_PREFIX = {
-    Link.NAMED: "",
-    Link.QUESTION: "Question ",
-    Link.ANSWER: "Answer to ",
+    LinkTypes.NAMED: "",
+    LinkTypes.QUESTION: "Question ",
+    LinkTypes.ANSWER: "Answer to ",
 }
 
 
@@ -95,12 +96,12 @@ class ReferencesBuilder:
             and None is not answer
         ):
             src["question"] = question = self._get_question_id(answer)
-        type = Link.NAMED
+        type = LinkTypes.NAMED
         if None is name:
             type = (
-                Link.ANSWER
+                LinkTypes.ANSWER
                 if "answer" in src else
-                Link.QUESTION
+                LinkTypes.QUESTION
             )
             if None is not question:
                 name = self._get_question_name(question)
@@ -112,13 +113,13 @@ class ReferencesBuilder:
         if (None is name
             or None is link
         ):
-            dest["link"] = None
+            dest["link"] = Null()
         else:
-            dest["link"] = {
-                "name": name,
-                "link": link,
-                "type": type,
-            }
+            dest["link"] = Link(
+                name,
+                link,
+                name_prefix=LINK_PREFIX[type]
+            )
 
     def _set_user(self, src, dest):
         user = src.get("user")
@@ -132,12 +133,13 @@ class ReferencesBuilder:
         ):
             user = self._get_user_id(question, answer or question)
         if None is user:
-            dest["user"] = None
+            dest["user"] = Null()
         else:
-            dest["user"] = {
-                "name": self._get_user_name(user),
-                "link": self._get_user_link(user),
-            }
+            dest["user"] = Link(
+                self._get_user_name(user),
+                self._get_user_link(user),
+                prefix=" by ",
+            )
 
     def _set_license(self, src, dest):
         license = src.get("license")
@@ -148,57 +150,35 @@ class ReferencesBuilder:
         ):
             license = self._get_post_license(question, post)
         if None is license:
-            dest["license"] = None
+            dest["license"] = Null()
         else:
             name, link = self._get_license(license)
-            dest["license"] = {
-                "name": name,
-                "link": link,
-            }
+            dest["license"] = Link(
+                name,
+                link,
+                prefix=" © ",
+            )
 
     def _set_section(self, src, dest):
-        dest["section"] = src.get("section")
+        if None is (section := src.get("section")):
+            dest["section"] = Null()
+        else:
+            dest["section"] = Text(section, ' under "{}"')
 
     def _set_quote(self, src, dest):
-        dest["quote"] = src.get("quote")
-
-    def _format_link(self, link, fmt="`{name} <{link}>`_", /, **kwargs):
-        if None is link:
-            return []
-        return [
-            fmt.format(
-                name=link["name"],
-                link=link["link"],
-                **{
-                    name: fn(link.get(name))
-                    for name, fn in kwargs.items()
-                },
-            ),
-        ]
-
-    def _normalize_quote(self, quote):
-        return textwrap.indent(quote, "    ")
+        if None is (quote := src.get("quote")):
+            dest["quote"] = Null()
+        else:
+            dest["quote"] = Quote(quote)
 
     def format_reference(self, reference):
-        output = []
-        output.extend(self._format_link(
-            reference.get("link"),
-            "`{type}{name} <{link}>`_",
-            type=lambda t: LINK_PREFIX[t],
-        ))
-        if None is not (section := reference.get("section")):
-            output.append(f' under "{section}"')
-        output.extend(self._format_link(
-            reference.get("user"),
-            " by `{name} <{link}>`_",
-        ))
-        output.extend(self._format_link(
-            reference.get("license"),
-            " © `{name} <{link}>`_",
-        ))
-        if None is not (quote := reference.get("quote")):
-            output.append(f"\n\n{self._normalize_quote(quote)}")
-        return "".join(output)
+        return "".join([
+            reference.get("link", Null()).as_string(),
+            reference.get("section", Null()).as_string(),
+            reference.get("user", Null()).as_string(),
+            reference.get("license", Null()).as_string(),
+            reference.get("quote", Null()).as_string(),
+        ])
 
     def messages(self, references):
         for reference in references:
@@ -207,6 +187,67 @@ class ReferencesBuilder:
                 "item": reference["item"],
                 "message": self.format_reference(reference),
             }
+
+
+@dataclasses.dataclass
+class Link:
+    name: str
+    link: str
+    prefix: str = ""
+    suffix: str = ""
+    name_prefix: str = ""
+    name_suffix: str = ""
+
+    def as_string(self):
+        return "{}`{}{}{} <{}>_`{}".format(
+            self.prefix,
+            self.name_prefix,
+            self.name,
+            self.name_suffix,
+            self.link,
+            self.suffix,
+        )
+
+    def as_nodes(self):
+        if prefix := self.prefix:
+            yield nodes.Text(prefix)
+        name = self.name_prefix + self.name + self.name_suffix
+        link = self.link
+        yield nodes.reference('', name, internal=False, refuri=link, reftitle=self.name)
+        if suffix := self.suffix:
+            yield nodes.Text(suffix)
+
+
+@dataclasses.dataclass
+class Text:
+    text: str
+    format: str = "{}"
+
+    def as_string(self):
+        return self.format.format(self.text)
+
+    def as_nodes(self):
+        yield nodes.Text(self.format.format(self.text))
+
+
+@dataclasses.dataclass
+class Null:
+    def as_string(self):
+        return ""
+
+    def as_nodes(self):
+        return []
+
+
+@dataclasses.dataclass
+class Quote:
+    quote: str
+
+    def as_string(self):
+        return "\n\n" + textwrap.indent(self.quote, "    ")
+
+    def as_nodes(self):
+        yield nodes.block_quote("", nodes.Text(self.quote))
 
 
 class References:
@@ -245,7 +286,7 @@ class References:
             )
         return {
             key: {
-                item: group[item]
+                str(item): group[item]
                 for item in sorted(group)
             }
             for key, group in groups.items()
